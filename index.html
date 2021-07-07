@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visualize Your Sorting</title>
 
-    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
 
 </head> 
 
@@ -19,10 +19,10 @@
     <div class="button-group">
         <button class="generate" onclick="generateArray()" id="generate">Generate New Array</button>
 
-        <button class="sort-button" onclick="selectionSort()" id="generate">Selection Sort</button>
-        <button class="sort-button" onclick="bubbleSort()" id="generate">Bubble Sort</button>
-        <button class="sort-button" onclick="selectionSort(),disable()" id="generate">Merge Sort</button>
-        <button class="sort-button" onclick="selectionSort(),disable()" id="generate">Insertion Sort</button>
+        <button class="sort-button" onclick="selectionSort()" id="selection">Selection Sort</button>
+        <button class="sort-button" onclick="bubbleSort()" id="bubble">Bubble Sort</button>
+        <button class="sort-button" onclick="mergeSort()" id="merge">Merge Sort</button>
+        <button class="sort-button" onclick="insertionSort()" id="insertion">Insertion Sort</button>
     </div>
 
     <script src="script.js"></script>
