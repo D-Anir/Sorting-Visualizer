@@ -1,9 +1,19 @@
 const container = document.querySelector('.data-container')
-
 const ARRAY_SIZE = 20
 const MAX_VALUE = 100
 const MIN_VALUE = 5
-const DELAY = 50
+var DELAY = 200
+
+const speed = document.getElementById("speed")
+const val = speed.options[speed.selectedIndex].value
+
+speed.addEventListener("change", (e) => {
+    const value = e.target.value
+   
+    if (value) {
+        DELAY = parseInt(value)
+    }
+});
 
 function generateArray(){
 
@@ -26,6 +36,9 @@ function generateArray(){
         container.append(bar)
 
     }
+
+    var message = document.getElementById("message")
+    message.innerHTML = ""
 }
 
 async function selectionSort(){
@@ -82,6 +95,8 @@ async function selectionSort(){
         array[i].style.backgroundColor = "rgb(0,255,34)";
     }
 
+    var message = document.getElementById("message")
+    message.innerHTML = "<h3>Generated Array Sorted</h3>"
 }
 
 
@@ -126,6 +141,65 @@ async function bubbleSort(){
         }
         array[array.length - i - 1].style.backgroundColor = "rgb(0,255,34)";
     }
+
+    var message = document.getElementById("message")
+    message.innerHTML = "<h3>Generated Array Sorted</h3>"
+}
+
+async function insertionSort(){
+    let array = document.querySelectorAll('.bar')
+
+    array[0].style.backgroundColor = "rgb(0,255,34)"
+
+    for(var i=1; i<array.length; i++){
+        var j = i-1
+        
+        var key = parseInt(array[i].childNodes[0].innerHTML)
+        var key_height = array[i].style.height
+
+        array[i].style.backgroundColor = "darkblue"
+
+        await new Promise((resolve) => 
+            setTimeout(() => {
+                resolve();
+            }, DELAY)
+        )
+
+        while(j>=0 && parseInt(array[j].childNodes[0].innerHTML) > key){
+            array[j].style.backgroundColor = "darkblue"
+
+            array[j + 1].style.height = array[j].style.height;
+            array[j + 1].childNodes[0].innerText = array[j].childNodes[0].innerText;
+
+            j = j-1
+
+            await new Promise((resolve) => 
+                setTimeout(() => {
+                    resolve();
+                }, DELAY)
+            )
+            
+            for(var k=i; k>=0; k--){
+                array[k].style.backgroundColor = "rgb(0,255,34)" 
+            }
+        }
+
+        array[j + 1].style.height = key_height;
+        array[j + 1].childNodes[0].innerHTML = key;
+        
+        // To pause the execution of code for 600 milliseconds
+        await new Promise((resolve) =>
+        setTimeout(() => {
+            resolve();
+        }, DELAY)
+        );
+        
+        // Provide light green color to the ith bar
+        array[i].style.backgroundColor = "rgb(0,255,34)";
+    }
+
+    var message = document.getElementById("message")
+    message.innerHTML = "<h3>Generated Array Sorted</h3>"
 }
 
 window.onload = function() {

@@ -9,8 +9,8 @@ body {
   margin-bottom: 20vw;
   margin-left: 20vw;
   margin-right: 20vw;
-  background-color: turquoise;
-  color: green;
+  background-color: rgba(142, 31, 253, 0.741);
+  color: white;
   border-radius: 20px;
   font-weight: bold;
 }
@@ -42,7 +42,7 @@ body {
 
 .data-container {
   width: 600px;
-  height: 123px;
+  height: 70px;
   position: relative;
   margin: 0 auto;
 }
@@ -62,4 +62,14 @@ body {
   width: 100%;
   text-align: center;
   font-size: small;
+}
+
+.utility {
+  margin-top: 25px;
+  text-align: center;
+}
+
+#message {
+  text-align: center;
+  height: 30px;
 }
