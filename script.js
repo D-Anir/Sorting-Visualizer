@@ -284,14 +284,14 @@ async function quickSort(low = 0, high = document.querySelectorAll('.bar').lengt
         await quickSort(low, pivot);
         await quickSort(pivot+1, high);
     }
-    await new Promise((resolve) => 
-        setTimeout(() => {
-            var message = document.getElementById("message")
-            message.innerHTML = "<h3>Generated Array Sorted</h3>"
+    // await new Promise((resolve) => 
+    //     setTimeout(() => {
+    //         var message = document.getElementById("message")
+    //         message.innerHTML = "<h3>Generated Array Sorted</h3>"
 
-            resolve()
-        }, DELAY)
-    )
+    //         resolve()
+    //     }, DELAY)
+    // )
 }
 
 
