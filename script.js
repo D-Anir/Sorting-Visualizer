@@ -1,6 +1,6 @@
 const container = document.querySelector('.data-container')
 const ARRAY_SIZE = 20
-const MAX_VALUE = 300
+const MAX_VALUE = 250
 const MIN_VALUE = 5
 var DELAY = 200
 var ARRAY = []
