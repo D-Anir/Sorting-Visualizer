@@ -42,7 +42,7 @@ body {
 
 .data-container {
   width: 600px;
-  height: 70px;
+  height: 40px;
   position: relative;
   margin: 0 auto;
 }
@@ -72,4 +72,11 @@ body {
 #message {
   text-align: center;
   height: 30px;
+}
+
+.footer {
+  margin-top: 25px;
+  text-align: center;
+  background-color: turquoise;
+  border-radius: 20px;
 }
